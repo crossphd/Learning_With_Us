@@ -1,0 +1,24 @@
+
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  username: postgres
+  password: password
+  host: localhost
+
+development:
+  <<: *default
+  database: learningwithus_development
+
+ 
+test:
+  <<: *default
+  database: learningwithus_test
+
+
+production:
+  <<: *default
+  database: learningwithus_production
+
+
