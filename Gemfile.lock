@@ -30,6 +30,10 @@ GEM
     arel (5.0.1.20140414130214)
     autoprefixer-rails (6.5.3.1)
       execjs
+    babel-source (5.8.35)
+    babel-transpiler (0.7.0)
+      babel-source (>= 4.0, < 6)
+      execjs (~> 2.0)
     bootstrap-sass (3.3.5.1)
       autoprefixer-rails (>= 5.0.0.1)
       sass (>= 3.3.0)
@@ -95,6 +99,9 @@ GEM
     sdoc (0.4.2)
       json (~> 1.7, >= 1.7.7)
       rdoc (~> 4.0)
+    simple_form (3.3.1)
+      actionpack (> 4, < 5.1)
+      activemodel (> 4, < 5.1)
     spring (1.7.2)
     sprockets (2.11.0)
       hike (~> 1.2)
@@ -120,6 +127,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  babel-transpiler
   bootstrap-sass (~> 3.3.5.1)
   coffee-rails (~> 4.0.0)
   jbuilder (~> 2.0)
@@ -129,6 +137,7 @@ DEPENDENCIES
   rails_12factor
   sass-rails
   sdoc (~> 0.4.0)
+  simple_form
   spring
   sprockets (= 2.11.0)
   turbolinks

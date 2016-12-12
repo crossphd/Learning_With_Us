@@ -1,0 +1,42 @@
+
+
+// html {
+//   background: url("assets/images/learning4.jpg")no-repeat center top fixed;
+//   background-size: contain;
+//   font-family:'helvetica neue';
+//   text-align: center;
+// }
+
+
+#colors {
+  // background: url(http://cdn2.hubspot.net/hubfs/53/00-Blog_Thinkstock_Images/color-palette.png) center center no-repeat fixed;
+  // background-size:contain;
+  font-family:'helvetica neue';
+  text-align: center;
+}
+
+#element1 {
+  width: 200;
+  height: 200;
+  // background: red;
+}
+
+.circle {
+  width: 30rem;
+  height: 30rem;
+  /*border:200px solid white;*/
+  border-radius:50%;
+  margin:50px auto;
+  position: relative;
+  padding:2rem;
+  box-shadow:
+    0 0 0px 4px rgba(0,0,0,0.1),
+    inset 0 0 0 3px #EFEFEF,
+    inset 0 0 10px black,
+    0 0 10px rgba(0,0,0,0.2);
+}
+
+.name {
+  visibility: hidden;
+  padding-top: 33%;
+}
