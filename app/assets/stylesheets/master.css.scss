@@ -1,20 +1,26 @@
-// @import "bootstrap-sprockets";
-// @import "bootstrap";
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+
+$footer-height: 120px;
+
+
+html,
+body {
+  font-family: "Helvetica Neue", Helvetica;
+  height: 100%;
+}
 
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
   padding: 0;
 }
 
-body {
-  font-family: "Helvetica Neue", Helvetica;
-}
 .navbar {
-  background: white;
-  border-radius:0;
   font-family: "Helvetica Neue", Helvetica;
   font-weight: 200;
   border-radius: 0;
+  border: 0;
   margin-bottom: 0;
   text-align: right;
   margin:0 auto;
@@ -24,52 +30,150 @@ body {
   box-shadow:         0px 10px 24px 0px rgba(50, 50, 50, 0.75);
 }
 
-.navbar-default a.navbar-brand {
+.navbar-inverse a.navbar-brand {
+  overflow: hidden;
   font-family: "Helvetica Neue", Helvetica;
   font-weight: 400;
   font-size: 30px;
-  color:black;
+  color:white;
 }
 
-.hero_image {
+.hero_image1 {
   width: 100%;
   display: block;
   margin: auto;
-  margin-top: 60px;
-  margin-bottom: 40px;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 
-.booyah-box {
+.booyah-box1 {
+  position:relative;
   -moz-box-shadow: 1px 1px 2px 0 #d0d0d0;
   -webkit-box-shadow: 1px 1px 2px 0 #d0d0d0;
-  box-shadow: 1px 1px 2px 0 #d0d0d0;
-  background: #fff;
+  background: url('colorsmain1.jpg');
+  position: relative;
+  border-radius:40px;
   border: 1px solid #ccc;
   border-color: #e4e4e4 #bebebd #bebebd #e4e4e4;
-  padding: 10px;
+  padding:45px;
+  margin-top: 25px;
+  margin-bottom: 60px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  h1 {
+    font-size: 3em;
+    background: rgba(1,1,1,.8);
+    border-radius: 20px;
+    color: white;
+    padding: 10px;;
+  }
+  h4 {
+    background: rgba(1,1,1,.8);
+    border-radius: 20px;
+    color: white;
+    padding: 10px;;
+  }
+  span { 
+    position:absolute; 
+    width:100%;
+    height:100%;
+    top:0;
+    left: 0;
+
+    z-index: 1;
+
+    /* fixes overlap error in IE7/8, 
+       make sure you have an empty gif */
+    // background-image: url('empty.gif');  
+  }
 }
 
-// html,
-// body {
-//   height: 100%;
-// }
+.booyah-box4 {
+  position:relative;
+  -moz-box-shadow: 1px 1px 2px 0 #d0d0d0;
+  -webkit-box-shadow: 1px 1px 2px 0 #d0d0d0;
+  background: url('numbersmain1.jpg');
+  position: relative;
+  border-radius:40px;
+  border: 1px solid #ccc;
+  border-color: #e4e4e4 #bebebd #bebebd #e4e4e4;
+  padding:45px;
+  margin-top: 25px;
+  margin-bottom: 60px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  h1 {
+    font-size: 3em;
+    background: rgba(1,1,1,.8);
+    border-radius: 20px;
+    color: white;
+    padding: 10px;;
+  }
+  h4 {
+    background: rgba(1,1,1,.8);
+    border-radius: 20px;
+    color: white;
+    padding: 10px;;
+  }
+  span { 
+    position:absolute; 
+    width:100%;
+    height:100%;
+    top:0;
+    left: 0;
+
+    z-index: 1;
+
+    /* fixes overlap error in IE7/8, 
+       make sure you have an empty gif */
+    background-image: url('empty.gif');  
+  }
+}
+
+.feature-image {
+  width: 400px;
+  border-radius: 60px;
+}
+
+
+
 
 // #wrap {
 //   min-height: 100%;
 //   height: auto;
-//   margin: 0 auto -100px;
-//   padding: 0 0 100px;
+//   /* Negative indent footer by its height */
+//   margin: 0 auto -$footer-height;
+//   /* Pad bottom by footer height */
+//   padding: 0 0 $footer-height;
 // }
 
-/* Set the fixed height of the footer here */
-// #footer {
-//   height:80px;
-//   background-color: rgba(0,0,0,0.1);
-//   font-family: "Helvetica Neue",Helvetica;
-//   padding:10px 0px;
-//   // margin-top:30px;
-// }
 
-// .clr {
-//   clear:both;
-// }
+#footer {
+  min-height: 100px;
+  width: 100%;
+  color: white;
+  background-color: rgba(36,32,33,0.9);
+  font-family: "Helvetica Neue", Helvetica;
+  padding:10px 0px 0px 0px;
+  margin-top:30px;
+  font-weight: 100;
+}
+
+#footer a {
+  color:white;
+  font-weight: 100;
+}
+
+.clr {
+  clear:both;
+}
+
+.social-button {
+  margin:10px;
+}
+
+.social a:hover {
+  text-decoration:none;
+}
+
+.foot-space {
+  margin-top: 8px;
+}

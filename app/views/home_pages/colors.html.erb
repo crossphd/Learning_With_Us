@@ -1,85 +1,31 @@
+<html>
+<body class="color-body">
 
-<%= audio_tag 'red.mp3', id: 'red', data_key: 'red' %>
-<%= audio_tag 'green.mp3', id: 'green', data_key: 'green' %>
-<%= audio_tag 'black.mp3', id: 'black', data_key: 'black' %>
-<%= audio_tag 'brown.mp3', id: 'brown', data_key: 'brown' %>
-<%= audio_tag 'pink.mp3', id: 'pink', data_key: 'pink' %>
-<%= audio_tag 'orange.mp3', id: 'orange', data_key: 'orange' %>
-<%= audio_tag 'purple.mp3', id: 'purple', data_key: 'purple' %>
-<%= audio_tag 'white.mp3', id: 'white', data_key: 'white' %>
-<%= audio_tag 'yellow.mp3', id: 'yellow', data_key: 'yellow' %>
-<%= audio_tag 'blue.mp3', id: 'blue', data_key: 'blue' %>
+<%= image_tag 'color-palette1.jpg', class: 'hero_image2' %>
 
-<div class="container" id='colors'>
-  <h1>What color is the circle?</h1>
-  <div class="circle" id="element1"><h1 class="hid name"></h1></div>
-  <!-- <h1 class="hid name"></h1> -->
-  <div class="btn btn-primary" id="nextColor">Change Color</div>
-  <br>
-  <h2>(Click the circle to find out.)</h1>
+<br><br><br>
+<h1>Learn Your Colors With Us!</h1>
+
+<br />
+<div class="col-xs-10 col-xs-offset-1 features text-center">
+  <div class="booyah-box2 col-sm-5 ">
+  <a href="practice_colors"><span></span></a>
+  <h1 align="center" >Learn</h1>
+    <br /> 
+  <h4>Check out all the colors at once! Click on each color to hear what color it is and see how it is spelled.</h4>
+  </div>
+
+  <div class="booyah-box3 col-sm-5 col-sm-offset-2">
+    <a href="practice_colors"><span></span></a>
+    <h1 align="center">Practice</h1>
+    <br />
+    <h4>Try to guess each color! Don't worry if you aren't sure, just click on the color to hear what it is!</h4>
+  </div>
   <br class="clr" />
-<div>
+
+</div>
 
 
-
-
-
-<script>
-  function getRand(){
-    return Math.floor(Math.random() *
-      colorList.length);
-  }
-
-  var colorList = [
-    {
-      color: "black",
-    },
-    {
-      color: "blue",
-    },
-    {
-      color: "brown",
-    },
-    {
-      color: "green",
-    },
-    {
-      color: "orange",
-    },
-    {
-      color: "pink",
-    },
-    {
-      color: "purple",
-    },
-    {
-      color: "red",
-    },
-    {
-      color: "white",
-    },
-    {
-      color: "yellow"
-    }
-  ];
-
-  var orig = getRand();
-  $("#element1").css("background", colorList[orig].color);
-
-  var audioElement = document.createElement('audio');
-
-  $('.circle').click(function() {
-    $(this).parent().find('.name').css('visibility', 'visible');
-    $(this).parent().find('.name').html(colorList[orig].color);
-    document.getElementById(colorList[orig].color).play();
-  });
-
-  $('#nextColor').click(function(){
-    var num = getRand();
-    orig = num;
-    $("#element1").css("background", colorList[orig].color);
-    $(this).parent().find('.name').css('visibility', 'hidden');
-  }); 
-
-</script>
+</body>
+</html>
 

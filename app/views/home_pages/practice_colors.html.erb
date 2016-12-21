@@ -1,0 +1,99 @@
+<html>
+<body>
+
+<%= audio_tag 'red.mp3', id: 'red', data_key: 'red' %>
+<%= audio_tag 'green.mp3', id: 'green', data_key: 'green' %>
+<%= audio_tag 'black.mp3', id: 'black', data_key: 'black' %>
+<%= audio_tag 'brown.mp3', id: 'brown', data_key: 'brown' %>
+<%= audio_tag 'pink.mp3', id: 'pink', data_key: 'pink' %>
+<%= audio_tag 'orange.mp3', id: 'orange', data_key: 'orange' %>
+<%= audio_tag 'purple.mp3', id: 'purple', data_key: 'purple' %>
+<%= audio_tag 'white.mp3', id: 'white', data_key: 'white' %>
+<%= audio_tag 'yellow.mp3', id: 'yellow', data_key: 'yellow' %>
+<%= audio_tag 'blue.mp3', id: 'blue', data_key: 'blue' %>
+
+<div class="container" id='colors'>
+  <h1>What color is the circle?</h1>
+  <div class="circle" id="element1"><h1 class="hid name"></h1></div>
+  <!-- <h1 class="hid name"></h1> -->
+  <div class="btn btn-primary color-btn" style="border-radius:40px;" id="nextColor"><span class="color-btn-txt">Change Color</span></div>
+  <br><br>
+  <h2>(Click the circle to find out)</h2>
+  <br class="clr" />
+</div>
+
+
+
+
+
+<script>
+  function getRand(){
+    return Math.floor(Math.random() *
+      colorList.length);
+  }
+
+  var colorList = [
+    {
+      color: "black",
+      hex: "black",
+    },
+    {
+      color: "blue",
+      hex: "blue",
+    },
+    {
+      color: "brown",
+      hex: "#613107"
+    },
+    {
+      color: "green",
+      hex: "green",
+    },
+    {
+      color: "orange",
+      hex: "orange",
+    },
+    {
+      color: "pink",
+      hex: "pink",
+    },
+    {
+      color: "purple",
+      hex: "purple",
+    },
+    {
+      color: "red",
+      hex: "red",
+    },
+    {
+      color: "white",
+      hex: "white",
+    },
+    {
+      color: "yellow",
+      hex: "yellow"
+    }
+  ];
+
+  var orig = getRand();
+  $("#element1").css("background", colorList[orig].hex);
+
+  var audioElement = document.createElement('audio');
+
+  $('.circle').click(function() {
+    $(this).parent().find('.name').css('visibility', 'visible');
+    $(this).parent().find('.name').html(colorList[orig].color);
+    document.getElementById(colorList[orig].color).play();
+  });
+
+  $('#nextColor').click(function(){
+    var num = getRand();
+    orig = num;
+    $("#element1").css("background", colorList[orig].hex);
+    $(this).parent().find('.name').css('visibility', 'hidden');
+  }); 
+
+</script>
+
+</body>
+</html>
