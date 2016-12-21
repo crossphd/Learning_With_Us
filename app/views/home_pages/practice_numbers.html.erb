@@ -1,0 +1,103 @@
+<html>
+<body>
+
+<%= audio_tag 'one.mp3', id: 'one'%>
+<%= audio_tag 'two.mp3', id: 'two'%>
+<%= audio_tag 'three.mp3', id: 'three'%>
+<%= audio_tag 'four.mp3', id: 'four'%>
+<%= audio_tag 'five.mp3', id: 'five'%>
+<%= audio_tag 'six.mp3', id: 'six'%>
+<%= audio_tag 'seven.mp3', id: 'seven'%>
+<%= audio_tag 'eight.mp3', id: 'eight'%>
+<%= audio_tag 'nine.mp3', id: 'nine'%>
+<%= audio_tag 'ten.mp3', id: 'ten'%>
+<%= audio_tag 'zero.mp3', id: 'zero'%>
+
+<div class="container" id='number'>
+  <h1>What number is this?</h1>
+  <div id="num_img"><%= image_tag 'one.gif', class: "num_img_class" %></div>
+  <h2 class="number-name">one</h2>
+  <div class="btn btn-primary number-btn" style="border-radius:40px;" id="nextNumber"><span class="number-btn-txt">Change Number</span></div>
+  <br><br>
+  <h2>(Click the number to find out)</h2>
+  <br class="clr" />
+</div>
+
+
+
+
+
+<script>
+  function getRand(){
+    return Math.floor(Math.random() *
+      numberList.length);
+  }
+
+  var numberList = [
+    {
+      number: "one",
+      url: "/assets/one.gif"
+    },
+    {
+      number: "two",
+      url: "/assets/two.gif"
+    }
+    ,
+    {
+      number: "ten",
+      url: "/assets/ten.gif"
+    },
+    {
+      number: "three",
+      url: "/assets/three.gif"
+    },
+    {
+      number: "four",
+      url: "/assets/four.gif"
+    },
+    {
+      number: "five",
+      url: "/assets/five.gif"
+    },
+    {
+      number: "six",
+      url: "/assets/six.gif"
+    },
+    {
+      number: "seven",
+      url: "/assets/seven.gif"
+    },
+    {
+      number: "eight",
+      url: "/assets/eight.gif"
+    },
+    {
+      number: "nine",
+      url: "/assets/nine.gif"
+    }
+  ];
+
+  // var orig = getRand();
+  // $(".num_img_class").attr('src', numberList[orig].url);
+
+  var orig = 0;
+
+  var audioElement = document.createElement('audio');
+
+  $('#num_img').click(function() {
+    $(this).parent().find('.number-name').css('visibility', 'visible');
+    $(this).parent().find('.number-name').html(numberList[orig].number);
+    document.getElementById(numberList[orig].number).play();
+  });
+
+  $('#nextNumber').click(function(){
+    var num = getRand();
+    orig = num;   
+    $(this).parent().find('.number-name').css('visibility', 'hidden'); 
+    $(".num_img_class").attr('src', numberList[orig].url);    
+  }); 
+
+</script>
+
+</body>
+</html>
